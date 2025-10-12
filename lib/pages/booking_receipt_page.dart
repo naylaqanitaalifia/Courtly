@@ -26,6 +26,8 @@ class BookingReceiptPage extends StatefulWidget {
 }
 
 class _BookingReceiptPageState extends State<BookingReceiptPage> {
+  final int serviceFee = 5000;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,6 +165,50 @@ class _BookingReceiptPageState extends State<BookingReceiptPage> {
                         ),
                         Text(
                           widget.paymentMethod,
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: const Color(0xFF111827),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Price",
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: const Color(0xFF4B5563),
+                          ),
+                        ),
+                        Text(
+                          "Rp${formatRupiah(widget.package.price)}",
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: const Color(0xFF111827),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Service Fee",
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: const Color(0xFF4B5563),
+                          ),
+                        ),
+                        Text(
+                          "Rp${formatRupiah(serviceFee)}",
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,

@@ -421,7 +421,7 @@ class _HistoryPageState extends State<HistoryPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CustomAppBar(
-        title: "Payment History",
+        title: "Order History",
         showBottomLine: true,
         actions: [
           Padding(

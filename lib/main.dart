@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sewa_lapangan_app/pages/landing_page.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-  final prefs = await SharedPreferences.getInstance();
-  await prefs.clear();
+  // final prefs = await SharedPreferences.getInstance();
+  // await prefs.clear();
 
   runApp(const MyApp());
 }
